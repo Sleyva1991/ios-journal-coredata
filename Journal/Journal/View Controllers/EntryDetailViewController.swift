@@ -7,30 +7,50 @@
 //
 
 import UIKit
+import CoreData
 
 class EntryDetailViewController: UIViewController {
+    
+    var entry: Entry? {
+        didSet {
+            updateViews()
+        }
+    }
+    var entrycontroller: EntryController?
     
     @IBOutlet weak var entryTitleTextfield: UITextField!
     @IBOutlet weak var journalTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
     @IBAction func save(_ sender: Any) {
         
+        guard let title = entryTitleTextfield.text,
+            let journalText = journalTextView.text,
+            !title.isEmpty else { return }
+        
+        if let entry = entry {
+            entry.title = title
+            entry.bodyText = journalText
+            
+          entrycontroller?.update(entry: entry, with: title, bodyText: journalText)
+        } else {
+          entrycontroller?.create(wtih: title, bodyText: journalText, timestamp: Date(), identifier: "")
+        }
+        
+        navigationController?.popViewController(animated: true)
+        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateViews() {
+        
+        if isViewLoaded == true {
+        title = entry?.title ?? "Create Entry"
+        entryTitleTextfield.text = entry?.title
+        journalTextView.text = entry?.bodyText
+        }
     }
-    */
 
 }

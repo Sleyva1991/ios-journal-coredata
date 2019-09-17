@@ -16,6 +16,8 @@
 		E838BE05233024B60039A167 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838BE04233024B60039A167 /* EntryTableViewCell.swift */; };
 		E838BE08233029CB0039A167 /* Entry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E838BE06233029CB0039A167 /* Entry.xcdatamodeld */; };
 		E838BE0A23302AA90039A167 /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838BE0923302AA90039A167 /* Entry+Convenience.swift */; };
+		E838BE0C23302D840039A167 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838BE0B23302D840039A167 /* EntryController.swift */; };
+		E838BE0E23302EB40039A167 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838BE0D23302EB40039A167 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E838BE04233024B60039A167 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		E838BE07233029CB0039A167 /* Entry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entry.xcdatamodel; sourceTree = "<group>"; };
 		E838BE0923302AA90039A167 /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
+		E838BE0B23302D840039A167 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		E838BE0D23302EB40039A167 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			children = (
 				E838BE06233029CB0039A167 /* Entry.xcdatamodeld */,
 				E838BE0923302AA90039A167 /* Entry+Convenience.swift */,
+				E838BE0D23302EB40039A167 /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 		E838BDFC23301DF20039A167 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E838BE0B23302D840039A167 /* EntryController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -181,10 +187,12 @@
 			files = (
 				E838BE05233024B60039A167 /* EntryTableViewCell.swift in Sources */,
 				E838BE0323301FA60039A167 /* EntriesTableViewController.swift in Sources */,
+				E838BE0C23302D840039A167 /* EntryController.swift in Sources */,
 				E838BDE923301D040039A167 /* AppDelegate.swift in Sources */,
 				E838BE08233029CB0039A167 /* Entry.xcdatamodeld in Sources */,
 				E838BE0A23302AA90039A167 /* Entry+Convenience.swift in Sources */,
 				E838BE0123301F8B0039A167 /* EntryDetailViewController.swift in Sources */,
+				E838BE0E23302EB40039A167 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

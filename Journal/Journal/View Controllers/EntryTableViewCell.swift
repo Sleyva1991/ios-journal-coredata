@@ -10,6 +10,12 @@ import UIKit
 
 class EntryTableViewCell: UITableViewCell {
     
+    var entry: Entry? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     @IBOutlet weak var entryTitleLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
     @IBOutlet weak var bodyTextLabel: UILabel!
@@ -23,6 +29,13 @@ class EntryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateViews() {
+        guard let entry = entry else { return }
+        entryTitleLabel.text = entry.title
+        bodyTextLabel.text = entry.bodyText
+        timestampLabel.text = "\(entry.timestamp)"
     }
 
 }
