@@ -41,16 +41,16 @@ class CoreDataStack {
         }
     }
     
-    func loadFromPersistantStore() -> [Entry] {
-        let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
-        
-        do {
-            let entries = try CoreDataStack.shared.mainContext.fetch(fetchRequest)
-            return  entries
-        } catch {
-            NSLog("Error fetching tasks: \(error)")
-            return []
-        }
-    }
+//    func loadFromPersistantStore() -> [Entry] {
+//        let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
+//
+//        do {
+//            let entries = try CoreDataStack.shared.mainContext.fetch(fetchRequest)
+//            return  entries
+//        } catch {
+//            NSLog("Error fetching tasks: \(error)")
+//            return []
+//        }
+//    }
     
 }

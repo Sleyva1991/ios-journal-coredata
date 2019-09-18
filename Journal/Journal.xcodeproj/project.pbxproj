@@ -18,6 +18,7 @@
 		E838BE0A23302AA90039A167 /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838BE0923302AA90039A167 /* Entry+Convenience.swift */; };
 		E838BE0C23302D840039A167 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838BE0B23302D840039A167 /* EntryController.swift */; };
 		E838BE0E23302EB40039A167 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838BE0D23302EB40039A167 /* CoreDataStack.swift */; };
+		E83CC9962332DD0400503D94 /* mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83CC9952332DD0400503D94 /* mood.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		E838BE0923302AA90039A167 /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
 		E838BE0B23302D840039A167 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		E838BE0D23302EB40039A167 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E838BE102331B2610039A167 /* Entry 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Entry 2.xcdatamodel"; sourceTree = "<group>"; };
+		E83CC9952332DD0400503D94 /* mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mood.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 				E838BDEC23301D040039A167 /* Main.storyboard */,
 				E838BDEF23301D060039A167 /* Assets.xcassets */,
 				E838BDF123301D060039A167 /* LaunchScreen.storyboard */,
+				E83CC9952332DD0400503D94 /* mood.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -186,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E838BE05233024B60039A167 /* EntryTableViewCell.swift in Sources */,
+				E83CC9962332DD0400503D94 /* mood.swift in Sources */,
 				E838BE0323301FA60039A167 /* EntriesTableViewController.swift in Sources */,
 				E838BE0C23302D840039A167 /* EntryController.swift in Sources */,
 				E838BDE923301D040039A167 /* AppDelegate.swift in Sources */,
@@ -397,9 +402,10 @@
 		E838BE06233029CB0039A167 /* Entry.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				E838BE102331B2610039A167 /* Entry 2.xcdatamodel */,
 				E838BE07233029CB0039A167 /* Entry.xcdatamodel */,
 			);
-			currentVersion = E838BE07233029CB0039A167 /* Entry.xcdatamodel */;
+			currentVersion = E838BE102331B2610039A167 /* Entry 2.xcdatamodel */;
 			path = Entry.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

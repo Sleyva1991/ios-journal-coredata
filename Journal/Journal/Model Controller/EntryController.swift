@@ -7,26 +7,33 @@
 //
 
 import Foundation
+import CoreData
+
+
+
 
 class EntryController {
     
-    var entries: [Entry] = {
-       return CoreDataStack.shared.loadFromPersistantStore()
-    }()
+//    var entries: [Entry] = {
+//       return CoreDataStack.shared.loadFromPersistantStore()
+//    }()
 
-   func create(wtih title: String, bodyText: String, timestamp: Date, identifier: String) {
+    func create(wtih title: String, bodyText: String, mood: String) {
         
-        let _ = Entry(title: title, bodyText: bodyText, timestamp: Date(), identifier: "", context: CoreDataStack.shared.mainContext)
+//        let entry = Entry(title: title, bodyText: bodyText, mood: mood)
+        let entry = Entry(title: title, bodyText: bodyText, mood: mood)
+        
         
         CoreDataStack.shared.saveToPersistentStore()
     }
     
-    func update(entry: Entry, with title: String, bodyText: String) {
+    func update(entry: Entry, with title: String, bodyText: String, mood: String) {
         
         entry.title = title
         entry.bodyText = bodyText
         entry.timestamp = Date()
         entry.identifier =  ""
+        entry.mood = mood
         
         CoreDataStack.shared.saveToPersistentStore()
         
