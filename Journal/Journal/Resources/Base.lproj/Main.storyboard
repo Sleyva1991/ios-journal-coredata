@@ -82,28 +82,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-UI-fLp">
-                                <rect key="frame" x="20" y="160" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DOj-mB-kfJ">
-                                <rect key="frame" x="20" y="210" width="374" height="273"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6wa-tX-GyM">
+                                <rect key="frame" x="20" y="160" width="374" height="336"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-Q6-Uag">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
+                                        <segments>
+                                            <segment title="☹️"/>
+                                            <segment title="😐"/>
+                                            <segment title="🦖"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-UI-fLp">
+                                        <rect key="frame" x="0.0" y="34" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DOj-mB-kfJ">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="266"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DOj-mB-kfJ" firstAttribute="leading" secondItem="eio-Ea-t0i" secondAttribute="leading" constant="20" id="Rt7-rv-KRg"/>
-                            <constraint firstItem="7F3-UI-fLp" firstAttribute="leading" secondItem="eio-Ea-t0i" secondAttribute="leading" constant="20" id="XzH-W8-KKe"/>
-                            <constraint firstItem="eio-Ea-t0i" firstAttribute="bottom" secondItem="DOj-mB-kfJ" secondAttribute="bottom" constant="379" id="aml-WD-c2z"/>
-                            <constraint firstItem="7F3-UI-fLp" firstAttribute="top" secondItem="eio-Ea-t0i" secondAttribute="top" constant="20" id="fAV-dv-YvZ"/>
-                            <constraint firstItem="eio-Ea-t0i" firstAttribute="trailing" secondItem="7F3-UI-fLp" secondAttribute="trailing" constant="20" id="uYf-6o-paR"/>
-                            <constraint firstItem="DOj-mB-kfJ" firstAttribute="top" secondItem="7F3-UI-fLp" secondAttribute="bottom" constant="20" id="ww9-CU-xMb"/>
-                            <constraint firstItem="eio-Ea-t0i" firstAttribute="trailing" secondItem="DOj-mB-kfJ" secondAttribute="trailing" constant="20" id="yCo-fZ-hIX"/>
+                            <constraint firstItem="6wa-tX-GyM" firstAttribute="leading" secondItem="eio-Ea-t0i" secondAttribute="leading" constant="20" id="PY5-F8-lXk"/>
+                            <constraint firstItem="6wa-tX-GyM" firstAttribute="top" secondItem="eio-Ea-t0i" secondAttribute="top" constant="20" id="aHn-Qn-cFY"/>
+                            <constraint firstItem="eio-Ea-t0i" firstAttribute="trailing" secondItem="6wa-tX-GyM" secondAttribute="trailing" constant="20" id="eUq-GS-BKC"/>
+                            <constraint firstItem="eio-Ea-t0i" firstAttribute="bottom" secondItem="6wa-tX-GyM" secondAttribute="bottom" constant="366" id="ghw-8R-1sD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eio-Ea-t0i"/>
                     </view>
@@ -117,6 +127,7 @@
                     <connections>
                         <outlet property="entryTitleTextfield" destination="7F3-UI-fLp" id="oLm-ey-Sm7"/>
                         <outlet property="journalTextView" destination="DOj-mB-kfJ" id="qtw-hX-Vzq"/>
+                        <outlet property="moodSegmentedControl" destination="DLq-Q6-Uag" id="UI9-co-bkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAg-wv-9IM" userLabel="First Responder" sceneMemberID="firstResponder"/>
